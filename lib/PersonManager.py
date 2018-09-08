@@ -2,11 +2,25 @@ import csv
 class PersonManager:
     csv_files = []
     persons = []
+    output = 'outputs/portraits.csv'
 
     def __init__(self, file_addresses):
         self.csv_file = file_addresses
         self.getPortraits('CSV/soldier_portraits_australasian_traveller.csv')
+        self.persons = self.persons[1:]
+        self.writeScraperData()
         return
+
+    def writeScraperData(self):
+        with open(self.output, mode='w') as f:
+            data_writer = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+
+            data_writer.writerow(['rank', 'name', 'url'])
+
+            for p in self.persons:
+                data_writer.writerow([p['title'], p['name'], p['portraits'][0]])
+            
+
 
     def getAdoptASolidier(self):
         return
@@ -72,7 +86,7 @@ class PersonManager:
         for r in ranks:
             if r in name:
                 data['title'] = r
-                name.replace(r, '')
+                name = name.replace(r, '')
         data['name'] = name
 
         return data
