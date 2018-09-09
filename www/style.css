@@ -1,0 +1,33 @@
+* {
+    font-family: "noto", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+a, p {
+    font-size: 14pt;
+}
+
+table a {
+    font-size: 12pt;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(even) {
+    background-color: #EEE;
+}
+
+table td {
+    text-align: center;
+
+    max-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

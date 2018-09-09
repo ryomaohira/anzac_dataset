@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <link rel="stylesheet" href="/font.css">
+        <link rel="stylesheet" href="/style.css">
+
+        <!-- Page-specific CSS -->
+        <link rel="stylesheet" href="/pages/{{ page }}/{{ page }}.css">
+    </head>
+
+    <body>
+        <div class="content">
+            <div class="body">
+                <!-- Page-specific HTML -->
+                {% include 'pages/' + page + '/' + page + '.html' %}
+            </div>
+        </div>
+    </body>
+</html>

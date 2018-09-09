@@ -1,0 +1,28 @@
+@font-face {
+    font-family: noto;
+    src: url('fonts/NotoSans-Condensed.ttf');
+}
+@font-face {
+    font-family: noto;
+    src: url('fonts/NotoSans-CondensedBold.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: noto;
+    src: url('fonts/NotoSans-CondensedItalic.ttf');
+    font-style: italic;
+}
+@font-face {
+    font-family: noto;
+    src: url('fonts/NotoSans-CondensedBoldItalic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: noto;
+    src: url('fonts/NotoSansCJKjp-Regular.otf');
+    /* Only apply for hiragana, katakana and kanji (some other stuff might get
+       caught in this range though). */
+    unicode-range: U+3000-9FFF;
+}
